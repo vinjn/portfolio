@@ -58,18 +58,112 @@
 					</p>
 				</section>
 
+				<section>
+					<!-- Kinect -->
+					<section>
+						<h3>Kinect - Fruit Ninja Experiment</h3>
+						<p>
+							<small>I have developed a sophicated Kinect server which turns Kinect into a multi-touch device. This demo shows how to play Fruit Ninja with our hands, it supports two players and four hands at the same time.</small>
+						</p>
+						<iframe width=640 height=480 src="http://player.youku.com/embed/XMzI4MTk1NTI4" frameborder=0 allowfullscreen></iframe>
+					</section>
+					<!-- Leapmotion -->
+					<section>
+						<h3>Leap Motion - Fruit Ninja Experiment</h3>
+						<p>
+							<small>Leap Motion is another famous human-computer interaction device. I made this experiment to benchmark its response time and stability. It's developed in C++ and the networking protocol is TUIO.</small>
+						</p>
+						<iframe width=640 height=480 src="http://player.youku.com/embed/XNTIxMDM5OTI4" frameborder=0 allowfullscreen></iframe>
+					</section>
+				</section>
+
+				<!-- Laser -->
+				<section>
+					<section>
+						<h3>AirScan - Laser Scanner - Multi-touch</h3>
+						<p>
+							<small>AirScan is a large-scale touchless multi-touch system. The hardware part is a laser scanner working at high-frequency. And I am responsible for the software part, including socket communication, data analysis and TUIO message formatting.</small>
+						</p>
+						<img src="media/laser_hardware.jpg">
+					</section>
+					<section>
+						<p>
+							<small>The realtime data is provided in (degree, distance) pairs. I transform them into a boundary contour and leverage OpenCV to do image processing, contour detection, object extraction. The extracted objects are regarded as TUIO cursors, which can be used to manipulate the content presentation system on other computers.</small>
+						</p>
+						<img src="media/laser_official.png">
+					</section>
+					<section>
+						<p>
+							<small>AirScan is a complicated software with lots of parameters. In order to ease the headache for system setup, I developed another software to tune the parameters.</small>
+						</p>
+						<img src="media/laser_config.jpg">
+					</section>					
+				</section>
+
+				<!-- River of Dreams -->
+				<section>
+					<section>
+						<h3>Shanghai Film Museum - Large scale multi-touch system</h3>
+						<p>
+							<small>River of Dreams is made up of 55 multi-touch tables, which is a challenge for a stable and robust multi-touch system. The system is based on CCV (Core Community Vision), but with lots of improvements. </small>
+						</p>
+						<img src="media/river00.jpg">
+					</section>
+					<section>
+						<p>
+							<small>CRE Imagination hired me to add a brand new top-down tracking feature to CCV. I leveraged OpenCV and contour finding to achieve it. I also added multi-camera streaming and multi-threaded image processing to increase frame rate.</small>
+						</p>
+						<img src="media/river02.jpg">
+					</section>
+					<section>
+						<p>
+							<small>The user interface has been redesigned and only dependent on XML file, makes it easy to extend. Several new options have been implemented to survive the various lighting conditions in the musem.</small>
+						</p>
+						<img src="media/river_ccv.jpg">
+					</section>
+					<section>
+						<p>
+							<small>Due to the high software quality and excellent performance, these tables have been running for several months without any crash and debugging.</small>
+						</p>
+						<img src="media/river01.jpg">
+					</section>
+				</section>
+
+				<!-- Android app -->
+				<section>
+					<section>
+						<h3>Android - OSC Remote Controllers</h3>
+						<p>
+							<small>I made several Android application for CRE Imagination. The introdution of Android devices has opened a new opportunity to interation. They are used as a controller of remote media presenting system. The buttons and sliders will send custom OSC event to remote server.</small>
+						</p>
+						<img src="media/remote_yz.jpg">
+					</section>
+					<section>
+						<p>
+							<small>Besides the useful OSC messaging, I also brings TUIO protocol to the controller. Since the device supports more than two fingers simultaneously, the finger coordinates will be transformed to TUIO cursors and sent to remote server. By this way we can rotate and scale pictures displayed by remote computers.</small>
+						</p>
+						<img src="media/remote_tuio.jpg">
+					</section>
+					<section>
+						<p>
+							<small>In order to make the development process more smoothly, I designed and implemented a series of Java classes. After using the framework, my team members (two) can create new software without deep knowledge about Android platform.</small>
+						</p>
+						<img src="media/remote_95598.jpg">
+					</section>
+				</section>
+
 				<!-- FaceOff -->
 				<section>
 					<section>
-						<h3>2011 - Nike - FOS Faceoff</h3>
+						<h3>Nike - FOS Faceoff interactive treadmill</h3>
 						<p>
-							<small>FOS Faceoff is an event of Nike, I co-operated with Super Nature Design to complete this task. I am responsible for all the softwares, including the scoreboard which display the time and score of each player, the panel behind each player and the login system.</small>
+							<small>FOS Faceoff is an event of Nike made up of 10 treadmills. I co-operated with Super Nature Design to complete this task. I am responsible for all the softwares, including the scoreboard which display the time and score of each player, the panel behind each player and the login system.</small>
 						</p>
 						<img src="media/nikefaceoff_img01.jpg">
 					</section>
 					<section>
 						<p>
-							<small>The panel is a realtime visualization system which shows the running speed of each player. I use openFrameworks and OpenGL to render several smooth particles, the faster the player runs, the bigger and faster the particle become.</small>
+							<small>The panel is a realtime visualization system which shows the speed of each treadmill. I use openFrameworks and OpenGL to render several smooth particles, the faster the player runs, the bigger and faster the particle become.</small>
 						</p>
 						<img src="media/nikefaceoff_img04.jpg">
 					</section>
@@ -88,81 +182,10 @@
 					</section>
 				</section>
 
-
-				<!-- VMDay -->
-				<section>
-					<section>
-						<h3>2011 - Event - Realtime Weibo Visualization</h3>
-						<p>
-							<small>Weibo Visualization is a software I developed for a wedding ceremony. #vm大婚# is the keyword that triggers the status update. The text and icon are then displayed at realtime. </small></p>
-						<img width=773 height=576 src="media/vmday_00.jpg">
-					</section>
-					<section>
-						<p>
-							<small>If you compare this image with the previous one, then you can easily see the difference in background. The heart images are displayed randomly, with fade-in and fade-out. </small>
-						</p>
-						<img width=773 height=576 src="media/vmday_01.jpg">
-					</section>
-					<section>
-						<p>
-							<small>It's written by Processing and can be easily modified to fetch other keywords. The background image and animation are both configurable. So it can also supports business events.</small>
-						</p>
-						<img src="media/vmday_src.png">
-					</section>
-				</section>
-
-				<section>
-					<!-- Kinect -->
-					<section>
-						<h3>2012 - Kinect - Fruit Ninja Demo</h3>
-						<p>
-							<small>I have developed a sophicated Kinect server which turns Kinect into a multi-touch device. This demo shows how to play Fruit Ninja with our hands, it supports two players and four hands at the same time.</small>
-						</p>
-						<iframe width=640 height=480 src="http://player.youku.com/embed/XMzI4MTk1NTI4" frameborder=0 allowfullscreen></iframe>
-					</section>
-					<!-- Leapmotion -->
-					<section>
-						<h3>2013 - Leap Motion - Fruit Ninja Demo</h3>
-						<p>
-							<small>Leap Motion is another famous human-computer interaction device. I made this experiment to benchmark its response time and stability. It's developed in C++ and the networking protocol is TUIO.</small>
-						</p>
-						<iframe width=640 height=480 src="http://player.youku.com/embed/XNTIxMDM5OTI4" frameborder=0 allowfullscreen></iframe>
-					</section>
-				</section>
-
-				<!-- River of Dreams -->
-				<section>
-					<section>
-						<h3>2013 - Shanghai Film Museum - River of Dreams</h3>
-						<p>
-							<small>River of Dreams is made up of 55 multi-touch tables, which is a challenge for a stable and robust multi-touch system. The system is based on CCV (Core Community Vision), but with lots of improvements. </small>
-						</p>
-						<img src="media/river00.jpg">
-					</section>
-					<section>
-						<p>
-							<small>CRE Imagnation hired me to add a brand new top-down tracking feature to CCV. I leveraged OpenCV and contour finding to achieve it. I also added multi-camera streaming and multi-threaded image processing to increase frame rate.</small>
-						</p>
-						<img src="media/river02.jpg">
-					</section>
-					<section>
-						<p>
-							<small>The user interface has been redesigned and only dependent on XML file, makes it easy to extend. Several new options have been implemented to survive the various lighting conditions in the musem.</small>
-						</p>
-						<img src="media/river_ccv.jpg">
-					</section>
-					<section>
-						<p>
-							<small>Due to the high software quality and excellent performance, these tables have been running for several months without any crash and debugging.</small>
-						</p>
-						<img src="media/river01.jpg">
-					</section>
-				</section>
-
 				<!-- Nike Flex -->
 				<section>
 					<section>
-						<h3>2013 - Nike - Flex Interactive LED</h3>
+						<h3>Nike - Flex Interactive LED</h3>
 						<p>
 							<small>Nike Flex is an interactive LED installation that makes response to human movements in a small area. I co-operated with Super Nature Design to finish this installation. When there is no visitor around, it will display realtime animations. </small>
 						</p>
